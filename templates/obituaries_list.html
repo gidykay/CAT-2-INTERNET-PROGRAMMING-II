@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obituaries List</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Obituaries</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Date of Birth</th>
+                    <th>Date of Death</th>
+                    <th>Content</th>
+                    <th>Author</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for obituary in obituaries %}
+                    <tr>
+                        <td>{{ obituary.id }}</td>
+                        <td>{{ obituary.name }}</td>
+                        <td>{{ obituary.date_of_birth }}</td>
+                        <td>{{ obituary.date_of_death }}</td>
+                        <td>{{ obituary.content }}</td>
+                        <td>{{ obituary.author }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/">Add a New Obituary</a>
+    </div>
+</body>
+                  </html>
